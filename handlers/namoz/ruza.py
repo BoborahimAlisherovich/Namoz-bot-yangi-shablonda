@@ -6,15 +6,15 @@ from aiogram.fsm.context import FSMContext
 
 
 #Ro'za   ===-------------------==
-@dp.message(F.text=="Ro'za")
+@dp.message(F.text=="RO'ZA")
 async def message(message:Message):
-    await message.answer(text="Ro'za <a href='https://t.me/mukammal_namoz/88'>Bizning kanal</a>",reply_markup=admin_keyboard.ruza)  
+    await message.answer(text="Ro'za <a href='https://t.me/mukammal_namoz/88'>.</a>",reply_markup=admin_keyboard.ruza)  
 
 
 @dp.callback_query(F.data == "ruza_button_orqga")
 async def ruza_button_orqga(callback: CallbackQuery):
     await callback.message.delete()
-    await callback.message.answer(text="""Ro'za <a href='https://t.me/mukammal_namoz/88'>Bizning kanal</a>""",reply_markup=admin_keyboard.ruza) 
+    await callback.message.answer(text="""Ro'za <a href='https://t.me/mukammal_namoz/88'>.</a>""",reply_markup=admin_keyboard.ruza) 
 
 
 @dp.callback_query(F.data == "zuza_qanday_ibodat")

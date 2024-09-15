@@ -6,13 +6,13 @@ from loader import dp
  #  zakot = ==============---
 @dp.message(F.text=="ZAKOT")
 async def message(message:Message):
-    await message.answer(text="ZAKOT  <a href='https://t.me/mukammal_namoz/87'>Bizning kanal</a>   ",reply_markup=admin_keyboard.zakot)  
+    await message.answer(text="ZAKOT  <a href='https://t.me/mukammal_namoz/87'>.</a>   ",reply_markup=admin_keyboard.zakot)  
 
 
 @dp.callback_query(F.data == "zakot_orqa_button")
 async def zakot_nima(callback: CallbackQuery):
     await callback.message.delete()
-    await callback.message.answer(text=""" Zakot <a href='https://t.me/mukammal_namoz/87'>Bizning kanal</a> """,reply_markup=admin_keyboard.zakot)
+    await callback.message.answer(text=""" Zakot <a href='https://t.me/mukammal_namoz/87'>.</a> """,reply_markup=admin_keyboard.zakot)
 
 @dp.callback_query(F.data == "zakot_nima")
 async def zakot_nima(callback: CallbackQuery):

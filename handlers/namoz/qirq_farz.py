@@ -12,7 +12,7 @@ async def namoz_vaqti(message: Message):
     await message.answer(
         text="""
 40 farz
-<a href='https://t.me/mukammal_namoz/89'>Bizning kanal</a>   
+<a href='https://t.me/mukammal_namoz/89'>.</a>   
 
 """,reply_markup=admin_keyboard.qiriq_farz)
     
@@ -116,10 +116,20 @@ async def uch_farz(callback: CallbackQuery):
 Ilm izlash, o'qish farz.  Inson hayoti davomida kerak bo‘ladigan halol-haromga doir ilmlarni o‘zlashtirishi farzdir.
  """,reply_markup=admin_keyboard.bu_uchun_orqaga) 
 
+@dp.callback_query(F.data == "ikki_farz_xayz")    
+async def uch_farz(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text="""  
+Xayz hukmlarini bilish. Xayz kunlarining ozi 3 kun ko'pi 10 kun. Xayzdan pok yurishning eng ozi 15 kun, ko'pining chegarasi yoq(Bir umr xayz ko'rmasa, namoz o'qiyveradi)
+Xayz kunlarda namoz o'qilmaydi, ro'za tutilmaydi, jinsiy aloqa qilinmaydi. Xayz to'xtashi bilan g'usl qilib poklanib namozini davom ettiradi, ro'zasini tutadi. Xayzli ayol Qur'on tilovat qilmaydi. Musxafni ushlamaydi Ka'bani tavof qilmaydi.
+Nifos holati. Ayollada tuqqandan so'ng bachadondan qirq kungacha keladigan qon nifos qonidir Nifos holatida xayz holati kabi namoz o'qilmaydi, Qur'on tilovat qilmaydi, musxafni ushlamaydi va Ka'bani tavof qilmaydi, Bu qon qirq kundan oldin to'xtashi ham mumkin. Qon tuxtagan kun g'usl olib ibodatlarda davom etiladi. Qirq kun ichida qon kelishi yana boshlanib qolsa, qon to'xtagan oldingi kunlar ham nifos holatidagi kunlar hisoblanadi                                                                     
+ """,reply_markup=admin_keyboard.bu_uchun_orqaga) 
+
+
 @dp.callback_query(F.data == "orqaga_uchun_farz")    
 async def uch_farz(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  
 40 farz
- <a href='https://t.me/mukammal_namoz/89'>Bizning kanal</a>                                    
+ <a href='https://t.me/mukammal_namoz/89'></a>                                    
  """,reply_markup=admin_keyboard.qiriq_farz) 

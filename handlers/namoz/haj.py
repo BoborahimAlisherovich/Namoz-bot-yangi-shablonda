@@ -9,12 +9,12 @@ from loader import dp
 async def message(message:Message):
 
 
-    await message.answer(text="HAJ  <a href='https://t.me/mukammal_namoz/86'>Bizning kanal</a>",reply_markup=admin_keyboard.haj)
+    await message.answer(text="HAJ  <a href='https://t.me/mukammal_namoz/86'>.</a>",reply_markup=admin_keyboard.haj)
 
 @dp.callback_query(F.data == "haj_orqaga")
 async def haj_orqaga(callback: CallbackQuery):
     await callback.message.delete()
-    await callback.message.answer(text="Haj  <a href='https://t.me/mukammal_namoz/86'>Bizning kanal</a>", reply_markup=admin_keyboard.haj)
+    await callback.message.answer(text="Haj  <a href='https://t.me/mukammal_namoz/86'>.</a>", reply_markup=admin_keyboard.haj)
 
 @dp.callback_query(F.data == "qanday_ibodat")
 async def qanday_ibodat(callback: CallbackQuery):

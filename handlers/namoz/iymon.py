@@ -7,13 +7,13 @@ from aiogram.types import Message,CallbackQuery
 #Iymon ----------------===========
 @dp.message(F.text=="IYMON")
 async def message(message:Message):
-    await message.answer(text="IYMON  <a href='https://t.me/mukammal_namoz/85'>Bizning kanal</a>                                    ",reply_markup=admin_keyboard.iymon)
+    await message.answer(text="IYMON  <a href='https://t.me/mukammal_namoz/85'>.</a>                                    ",reply_markup=admin_keyboard.iymon)
 
 @dp.callback_query(F.data == "orqaga_button")
 async def orqaga_button(callback: CallbackQuery):
     await callback.message.delete()
 
-    await callback.message.answer(text="""IYMON  <a href='https://t.me/mukammal_namoz/85'>Bizning kanal</a>                                    """,reply_markup=admin_keyboard.iymon)
+    await callback.message.answer(text="""IYMON  <a href='https://t.me/mukammal_namoz/85'>.</a>                                    """,reply_markup=admin_keyboard.iymon)
 
 @dp.callback_query(F.data == "shariat")
 async def shariat(callback: CallbackQuery):

@@ -30,7 +30,7 @@ start_buttonnew = ReplyKeyboardMarkup(
          [KeyboardButton(text="IYMON"),
         KeyboardButton(text="HAJ")],
          [KeyboardButton(text="ZAKOT"),
-        KeyboardButton(text="Ro'za")]
+        KeyboardButton(text="RO'ZA")]
 
     ],
     resize_keyboard=True,
@@ -278,7 +278,7 @@ qiriq_farz  = InlineKeyboardMarkup(
       [InlineKeyboardButton(text="Tayammumning 4 farzi", callback_data="tayammum_turt_farz")],
       [InlineKeyboardButton(text="G'usldagi 3 farz", callback_data="uch_farz")],
       [InlineKeyboardButton(text="Amru-ma'ruf va naxiy-munkarda 2 farz", callback_data="amru_maruf")],
-      [InlineKeyboardButton(text="Xayz va nifosda 2 farz", callback_data="ikki_farz")],
+      [InlineKeyboardButton(text="Xayz va nifosda 2 farz", callback_data="ikki_farz_xayz")],
       [InlineKeyboardButton(text="Ilm izlshda 1 farz", callback_data="ikki_farz")],
       [InlineKeyboardButton(text="🏠 Bosh Menyu", callback_data="qaytish")],
     ]

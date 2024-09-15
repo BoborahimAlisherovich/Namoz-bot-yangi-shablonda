@@ -28,13 +28,13 @@ Tahorat uchun suv hozirlagandan keyin:
 11. Chap qoʻl bilan oʻng oyoqni oshiq qismi bilan qoʻshib, barmoqlar orasini ishqalab 3 marta yuviladi, keyin chap oyoq.
 12. Qibla tomonga qarab, ichida „Ashhadu an La ilaha illallohu va ashhadu anna Muhammadan abduhu va rosuluh“ deyiladi. 
                        
-<a href= 'https://t.me/mukammal_namoz/51'>Bizning kanal📢</a>
+<a href= 'https://t.me/mukammal_namoz/51'>.</a>
 """, reply_markup=admin_keyboard.tahorat_orqa_button)
 
 @dp.callback_query(F.data == 'ayollr_tahorat')
 async def ayollr_tahorat(callback: CallbackQuery):
     await callback.message.delete()
-    await callback.message.answer(text="""Tahorat ayollar uchun <a href = 'https://t.me/mukammal_namoz/52'>Bizning kanal📢</a>   """,reply_markup=admin_keyboard.tahorat_orqa_button)
+    await callback.message.answer(text="""Tahorat ayollar uchun <a href = 'https://t.me/mukammal_namoz/52'>.</a>   """,reply_markup=admin_keyboard.tahorat_orqa_button)
 
 @dp.callback_query(F.data == 'tahorat_button_orqga')
 async def tahorat_button_orqga(callback: CallbackQuery):
@@ -83,7 +83,7 @@ Magar yoʻldan oʻtuvchi boʻlsa, mayli“, degan (43-oyat).
 Ushbu ikki oyatda ogʻiz, burun va badanning barchasini yuvish maʼnosi bor. 
 Abu Hurayra roziyalloxu anhudan rivoyat qilinadi
 
-<a href='https://t.me/mukammal_namoz/53'>Bizning kanal</a>
+<a href='https://t.me/mukammal_namoz/53'>.</a>
 
 """, 
         reply_markup=admin_keyboard.Admin
