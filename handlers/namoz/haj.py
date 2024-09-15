@@ -7,14 +7,18 @@ from loader import dp
 #Haj   ---------------============
 @dp.message(F.text=="HAJ")
 async def message(message:Message):
-    await message.answer(text="HAJ",reply_markup=admin_keyboard.haj)
+
+
+    await message.answer(text="HAJ  <a href='https://t.me/mukammal_namoz/86'>Bizning kanal</a>",reply_markup=admin_keyboard.haj)
 
 @dp.callback_query(F.data == "haj_orqaga")
 async def haj_orqaga(callback: CallbackQuery):
-    await callback.message.answer(text="Haj", reply_markup=admin_keyboard.haj)
+    await callback.message.delete()
+    await callback.message.answer(text="Haj  <a href='https://t.me/mukammal_namoz/86'>Bizning kanal</a>", reply_markup=admin_keyboard.haj)
 
 @dp.callback_query(F.data == "qanday_ibodat")
 async def qanday_ibodat(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Haj ibodatining boshqa ibodatlardan bir farqi shuki, u hammaga ham bir paytning o‘zida farz bo‘lavermaydi, balki ayrim shartlariga muvofiq kelgan musulmonlargagina farzdir. Qodir bo‘lgan odamlarga Alloh uchun Baytni haj qilish farz. Ulamolar kishiga haj farz bo‘lishi uchun quyidagi shartlar mavjud bo‘lishi kerakligini ta’kidlashgan:
 
@@ -47,6 +51,7 @@ Haj ulug‘ ruhiy ozuqa beradigan ibodat bo‘lib, unda musulmon bandaning vujud
 
 @dp.callback_query(F.data == "haj_odoblari")
 async def haj_odoblari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 1. Haj va umrani niyat qilgan kishi avvalambor bu ulug‘ safardan Alloh taoloning roziligini maqsad qilishi hamda riyokorlik, odamlar eshitsin kabi illatlardan o‘zini poklashi lozim;
 2. Safar oldidan kishi o‘zining vasiyat, qarz oldi-berdilari va omonatlarini yozib qoldirishi mustahab amallardan;
@@ -67,6 +72,7 @@ Alloh Taalo barcha hojilarimizni hajlarini mabrur hajlardan qilsin!
 
 @dp.callback_query(F.data == "hajning_nozik_sirlari")
 async def hajning_nozik_sirlari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Alloh taologa yetishish uchun butunlay Uning O‘zini ko‘zlagan holda ajrab chiqmoq kerak bo‘ladi. Shuning uchun ham qadimgi rohiblar Alloh taologa yetishish maqsadida hamma narsadan ajrab, tog‘larga chiqib ketar edilar.
 Islomda rohiblik yo‘q. Ammo taqqoslash uchun aytadigan bo‘lsak, Islom ummatining rohibligi hajdir. Haj ibodatini ado etmoqchi bo‘lgan banda barcha shahvatlar, lazzatlardan, aloqa va mashg‘ulotlardan, hatto odatdagi kiyimlaridan ham ajraydi.
@@ -87,6 +93,7 @@ Hajning har bir amalida eslatma va ibrat bor:
 
 @dp.callback_query(F.data == "haj_tavsiya")
 async def haj_tavsiya(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Haj safariga chiquvchiga tavsiyalar
 Muborak haj safariga tayyorgarlik ko'rayotgan kishiga haj kitoblarida quyidagi
@@ -128,6 +135,7 @@ odamlar bilan qo'l berib so'rashib, ulardan haqqiga duo qilib turishlarini so ra
 
 @dp.callback_query(F.data == "haj_ibodat_turlari")
 async def haj_ibodat_turlari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Demak, haj turlari uchta:
 
@@ -143,6 +151,7 @@ So‘ng ikki rakaat namoz o‘qiydi. Ka'bani tavof qiladi, Safo va Marva orasida
 
 @dp.callback_query(F.data == "davomi_haj")
 async def davomi_haj(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 3. Qiron haji. “Qiron” so‘zi “yaqinlik”, “qo‘shilish” ma'nolarini anglatadi. Umra bilan yaqinlashtirib, bir-biriga qo‘shib qilingan hajni “qiron” haji deyiladi. Qironning ifroddan farqi shuki, ehromga kirishda niyat qiladi. Keyin talbiya aytadi. Makkaga kelgach, umra uchun tavofni ado etib, Safo va Marva orasida sa'y qiladi. Ammo sochini oldirmaydi, ehromdan chiqmaydi. Chunki unda hali hajning niyati bor. Keyin haj uchun yana bir tavof qiladi va sa'y ado etadi. Qolgan amallar ifrod hajinikiga o‘xshab ketadi. Hayit kuni tosh otishdan so‘ng qurbonlik qilish vojib. Jonliq so‘yayotganda “Qiron uchun” yo “Dami shukr” deb niyat qiladi. Undan so‘ng sochini oldiradi yo qisqartiradi. Ushbu tartib zarurdir. Ifoza tavofi qilingandan so‘ng, avval haj uchun sa'y qilmagan bo‘lsa sa'y qiladi. Qurbonlik so‘yishga imkoni yo‘qlar tamattu'ga o‘xshab ro‘za tutadilar.
 """,reply_markup=admin_keyboard.haj_ortga)
@@ -150,6 +159,7 @@ async def davomi_haj(callback: CallbackQuery):
 
 @dp.callback_query(F.data == "hajning_farzi")
 async def hajning_farzi(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Hajning farzlari uchta 
 1. Ehrom. 
@@ -210,6 +220,7 @@ Qudum tavofini vojib dеganlar uchun ham xuddi shuningdеk, umrani o‘zini niya
 
 @dp.callback_query(F.data == "ehromga_kirish")
 async def ehromga_kirish(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Hamma tayyorgarliklar nihoyasiga etib, haj amallarini boshlash navbati keladi. Shunda haj amallari­dan birinchisi ehrom bo‘ladi.
 “Ehrom” arabcha so‘z bo‘lib, lug‘atda «harom qilmoq» maʼnosini anglatadi. Ehromga kirgan odam uchun ehromdan oldin halol bo‘lgan baʼzi ish va narsalar harom bo‘ladi. Misol uchun, boshqa vaqtlarda o‘ziga xushbo‘y narsalarni sepishi halol edi, ehromga kirgach, bu narsa harom bo‘lib qoladi.
@@ -243,6 +254,7 @@ Maʼnosi: «Allohim, falonchining nomidan hajni iroda qildim, uni menga oson etg
 # qoldi 
 @dp.callback_query(F.data == "ehromdagi_amallar")
 async def ehromdagi_amallar(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 hromda qilish va qilmaslik kerak bo‘lgan amallar juda ko‘p bo‘lib, ulardan eng ahamiyatlilari yigirma sakkiztadir. Bular quyidagilar:  
 1.Ehrom holatida bit o‘ldirish:
@@ -264,8 +276,15 @@ Ehromdan chiqish vaqti kelishidan avval soqolni to‘liq qirdirish yoki to‘rtd
 9. Ehrom holatida qo‘ltiq osti tukini olish:
 Ehrom holatida ikki yoki bir qo‘ltiqning tuki olinsa, jarimasiga qon lozim bo‘ladi.
                                   
-""")
-    await callback.message.answer(text="""
+""",reply_markup=admin_keyboard.ehromdagi_amallar)
+    
+
+
+# qoldi 
+@dp.callback_query(F.data == "davomi_ehromdagi_amallar")
+async def ehromdagi_amallar(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text="""                                   
 10. Ehrom holatida kindik osti tukini olish:
 Ehrom holatida kindik osti tukni olinsa, jarimasiga qon vojib bo‘ladi.
 11. Bir vaqtda sochni, soqolni va butun tanadagi tuklarni olish:
@@ -286,11 +305,13 @@ Bir kishi bir kun yoki bir kecha yoki bir kun miqdorida, ya’ni o‘n ikki soat
 Ehrom holatida xushbo‘ylanish ayol va erkak kishiga ham birdek jinoyat hisoblanadi. Qasddan yoki bilmay yoki majburan xushbo‘ylik surtsa, har holatda ham jarima lozim bo‘ladi. Xushbo‘ylikni badanga yoki kiyimga surtadimi, farqi yo‘q, ya’ni baribir jinoyat hisoblanaveradi.
 20. Ehrom holatida ayol kishining xina qo‘yishi:
 Ayol kishi ehrom holatida kafti yoki oyog‘iga hina qo‘ysa, jarimasiga qon lozim bo‘ladi.                                  
-""",reply_markup=admin_keyboard.ehromga_kirish_davomi)
+""",reply_markup=admin_keyboard.ehromga_kirish_davomi)  
+
 
 
 @dp.callback_query(F.data == "davomini_uqish_button")
 async def davomini_uqish_button(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 21. Ehrom holatida attorning do‘konida o‘tirish:
 Ehrom holatida attorlik do‘konida o‘tirsa-yu, lekin badaniga yoki kiyimiga xushbo‘ylik surtmasa, jarima lozim bo‘lmaydi. Lekin atir hidini hidlash maqsadida attorlik do‘konida o‘tirish makruh bo‘lsa-da, jarimasiga hech narsa lozim bo‘lmaydi;
@@ -325,6 +346,7 @@ Ehrom holatida Haram hududida o‘n bir xil hayvonni o‘ldirish halol bo‘ladi
 
 @dp.callback_query(F.data == "talbiya_aytish")
 async def talbiya_aytish(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Kishi haj yoki umra niyati bilan talbiya aytganidan keyin mukammal muhrimga (ehromli kishiga) aylanadi va shundan keyin tikilgan kiyim, xushbo‘yliklar hamda shunga o‘xshash muhrimga ta’qiqlangan narsalarni ishlatish joiz bo‘lmaydi.
 Hap kim o‘zining imkoniyatlapidan kelib chiqib shy niyatlardan bipini niyat qiladi va co‘ngpa talbiya aytishni boshlaydi:
@@ -339,6 +361,7 @@ Ehrom bobida zikp qilingan yo‘l-yo‘piqlapga qattiq pioya etadi. Hamozdan key
 # qilish kerak  
 @dp.callback_query(F.data == "harami_sharif")
 async def harami_sharif(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Ehromdagi kishi Makkaga kipishdan oldin miyqotda imkon topib, g‘ycl qilib olca, yaxshi bo‘ladi. Shahapga kipib, joylashib bo‘lgach o‘sha zahoti Macjidyl-Hapomga oshiqadi. Unga «Bobyc-calom» eshigidan tavoze bilan, o‘zini xokcop tytgan holda, talbiya aytib, xyshy’ bilan kipadi. Boshqa eshiklardan kirish ham joiz.
 Haramga kirishda quyidagi duo o‘qiladi:
@@ -361,6 +384,7 @@ Yana hap kim o‘zi nimani xohlaca, shyni co‘pab, dyo qiladi. Shy bilan bipga,
 
 @dp.callback_query(F.data == "tavofni_boshlash")
 async def tavofni_boshlash(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Keyin hajapyl-acvadning (qora toshning) qapshicida to‘g‘pi typib, xyddi namozdagi kabi qo‘lini ko‘tapib takbip va tahlil aytadi. Co‘ngpa tavofni boshlash ychyn ilojini qilca, hajapyl-acvadni o‘padi.
 Kezi kelganda aytib o‘tish kepakki, hajapyl-acvadning ma’noci «qopa tosh» degani. U Ka’bai myazzamaning eshigi yaqinidagi bypchakka o‘pnatilgan bo‘lib, Payg‘ambapimiz alayhiscalom yni o‘pganlap, Shyning ychyn y o‘piladi.  
@@ -380,6 +404,7 @@ Hajapyl-acvadga etilganda bip tavof hicoblanadi. Yana «Bicmillahi, vallohy akba
 
 @dp.callback_query(F.data == "safo_va_marva")
 async def safo_va_marva(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Keyin hoji yoki umra qiluvchi yana qaytib, imkonini topca Hajapyl-acvadni o‘padi yoki ictilom qiladi. Bu napca Cafo va Mapvada ca’y qilishga tayyorgarlik hisoblanadi.
 Co‘ngpa Cafo tepaligiga chiqiladi, Baytyllohga yuzlanib, takbip va tahlil, Payg‘ambapimiz alayhiccalomga calavoty dypydlap aytiladi. Ikki qo‘l ko‘tapilib, hojatlapni Allohdan co‘pab, dyolap qilinadi va Mapva tepaligiga qapab yupib ketiladi.
@@ -395,6 +420,7 @@ Zylhijja oyining cakkizinchi kyni (by kyn bizda «yolg‘on apafa», apabchada e
 
 @dp.callback_query(F.data == "minoda_turish")
 async def minoda_turish(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Minoda tarviya kunining peshin, asr, shom, xufton hamda arafa kunining bomdod namozlari o‘qiladi. Asosan duo, ibodat bilan mashg‘ul bo‘linadi. Payg‘ambarimiz alayhissalom shunday qilganlar.
 Minoda bajarilishi zarur bo‘lgan amallar haqida Qur’oni Karimda shunday marhamat qilinadi:
@@ -411,6 +437,7 @@ Minoning uch kechasi mavjud bo‘lib, ular quyidagilar:
 
 @dp.callback_query(F.data == "arafoda_turish")
 async def arafoda_turish(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Arafotda hajning asosiy arkoni ado etiladi. Arabcha «arafot» so‘zi lug‘atda «bilish, tanish» ma’nolarini bildiradi. Makkaning janubi-sharqiy qismidagi, undan yigirma ikki chaqirim uzoqlikdagi tog‘ va vodiy Arafot deb ataladi.
 Odam alayhissalom bilan Havvo onamiz bir-birlarini tanib-topishishgani uchun Arafot deb nomlandi. Yoki Jabroil alayhissalom Ibrohim alayhissalomga ushbu makonda haj amallarini o‘rgatganlari uchundir. U zot: «Arofta?» («O‘rganib bo‘ldingmi?») deganlarida, Ibrohim alayhissalom: «Ha», deganlar. Mana shundan keyin Arafot deb nomlanib qoldi, deb Ibn Abbos aytganlar.  
@@ -428,6 +455,7 @@ Arafot ulug‘ maqom bo‘lib, u joydagi duolar qabuldir. Shuning uchun hoji u y
 
 @dp.callback_query(F.data == "muzdalifada_bulish")
 async def muzdalifada_bulish(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Quyosh botgach, shom namozini o‘qimasdan, Arafotdan Muzdalifaga qarab yuriladi. Yetib kelib, shu joyda tunash uchun joylashiladi. Ta’kidlab aytish kerakki, odam ko‘pligidan ba’zi kishilar Muzdalifa chegarasiga hali kirib bormay to‘xtaydilar, ba’zilari o‘tib ham ketadilar. Shunga ehtiyot bo‘lib, chegarada turish lozim. Bu yerda xufton vaqtida shom va xufton namozlari qo‘shib o‘qiladi. Agar biror kishi bilmasdan shomni yo‘lda o‘qigan bo‘lsa, qaytarib o‘qiydi.
 Bu kechaning fazli juda ulug‘ bo‘lib, ba’zi ulamolar uni juma va qadr kechalaridan ham afzal deyishgan. Bu yerda takbir, tasbeh va duolarga mashg‘ul bo‘lish kerak.
@@ -437,6 +465,7 @@ Ayollar, qariyalar, kasallar, bolalar qiynalishdan qo‘rqishsa, Muzdalifada to�
 
 @dp.callback_query(F.data == "shaytonga_tosh_otish")
 async def shaytonga_tosh_otish(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Minoga kelib joylashib bo‘lgach, endi tosh otish boshlanadi. Hayitning birinchi kuni yetti dona tosh otiladi. Toshni Muzdalifadan yoki xohlagan boshqa joydan terib olsa bo‘laveradi. Faqat odamlar otgan toshlardan bo‘lmasligi kerak. Mayda toshlar teriladi, hajmi no‘xatdan kattaroq bo‘lsa yaxshi.
 Tosh otish chog‘ida har bir hojining Ibrohim alayhissalom o‘g‘illarini Allohning amriga bo‘ysunib, qurbonlikka so‘ygani olib ketayotganlarini, ularning yo‘lini shayton to‘sib chiqib, ig‘vo qilmoqchi bo‘lganini, shunda Ibrohim alayhissalom tosh otib uni quvlaganlarini eslashi lozim.
@@ -452,6 +481,7 @@ Ikkinchi va ychinchi kynlapi tosh otishning vaqti zavoldan keyin to qyyosh botgy
 
 @dp.callback_query(F.data == "davomi_shaytonga_tosh_ot")
 async def davomi_shaytonga_tosh_ot(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 Hayitning uchinchi kyni ham shy tapzda tosh otiladi. Agap hoji to‘ptinchi kyni ham Minoda qolca, ynga o‘sha kyni ham tosh otish vojib bo‘ladi. Qolgan vaqtda hoji yana ko‘ppoq ibodat bilan mashg‘yl bo‘ladi.
 Toshni otib bo‘lib, to‘xtab turmay, u yerdan ketish lozim. Birinchi toshni otish bilan «labbayka» aytish to‘xtatiladi. Birinchi kuni tosh otish vaqti o‘sha kunning subhi sodig‘idan boshlab to kelasi kunning subhi sodig‘igachadir. Lekin o‘sha kuni zavolgacha otish – sunnat.
@@ -468,6 +498,7 @@ Tamatty’ va qiponni niyat qilganlapning shyndoq ham qypbonlik qilishlapi vojib
 
 @dp.callback_query(F.data == "tavohning_turlari")
 async def tavohning_turlari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 1. Tavofi qudum. U tavofi liqo yoki tavofi vurud ham deyiladi. Bu ifrod va qiron haji qiluvchi ofoqiylarga sunnat, ammo ahli Makka, tamattu’ yoki umra qiluvchi ofoqiyga sunnat emas. Bu tavofning surati shuki, miyqotning tashqarisidan kelib, ifrod hajini qiluvchi kishi Baytullohi sharifga kirishi bilanoq tavof qiladi. Bu ifrod haji qiluvchining tavofi qudumidir. Shuningdek, qiron haji qiluvchi kishi miyqotdan haj va umra – ikkovi uchun ehrom bog‘lab kelib, avval umra arkonlarini, ya’ni umra tavofi va sa’yini bajaradi. Keyin Ka’batullohga kelgani uchun nafl tariqasida bir tavof qiladi. Bu qiron haji qiluvchining tavofi qudumi hisoblanadi.
 2. Tavofi nafl. Nafl tavof har kim xohlagan paytda qilishi mumkin bo‘lgan tavofdir. Uning uchun biror vaqt belgilangan emas ("Muallimul hujjoj").
@@ -480,6 +511,7 @@ async def tavohning_turlari(callback: CallbackQuery):
 
 @dp.callback_query(F.data == "tavohning_turlari")
 async def tavohning_turlari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 1. Tavofi qudum: Tavofi qudum «tavofi liqo» (ko‘rishuv tavofi), «tavofi vurud» (tashrif tavofi) ham deyiladi. Bu ifrod yoki qiron haj qiluvchi ofoqiyga (Haram hududidan tashqarida yashovchilarga) sunnatdir. Makkalik va ofoqiylardan tamattu’ yoki umra qiluvchi uchun bu sunnat emas.
 Uning ko‘rinishi: Ifrod haj qiluvchi Haramga kirganidan keyin tezlik bilan bir tavof qilib oladi. O‘sha tavof «tavofi qudum» (ko‘rishuv tavofi) deyiladi. Qiron qiluvchi umra bilan hajga birga ehromga kirib, Haramga kirgandan keyin birinchi umra arkonlarini ado qilib bo‘lgandan keyin nafl tarzida bir tavof qiladi. Mana shu qiron qiluvchining tavofi qudumi hisoblanadi.
@@ -495,6 +527,7 @@ Hap kim yuptiga ketishdan oldin vido tavofini qilishi kepak. By amal vojibdip. U
 
 @dp.callback_query(F.data == "badal_haji")
 async def badal_haji(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""   
 1. Cof badan ibodati. Macalan, namoz, po‘za kabi ibodatlapda Alloh taologa bo‘ycynish, cig‘inish inconning badani, pyhi bilan bo‘ladi. Bularda molga, pylga hech qanday ehtiyoj yo‘q. Bynday badan ibodatlapi hap bip inconga biplamchi fapz (farzi ayn) bo‘ladi. Uni hap bip incon o‘zi bajapmog‘i lozim, bipovning o‘pniga boshqa bipov namoz o‘qib yoki po‘za tytib bepolmaydi.
 2. Cof moliyaviy ibodatlap. By ibodatga zakot va cadaqa kiradi. By ibodatlap inconning moly pylini capflash bilan amalga oshadi. O‘sha mol olyvchi kishining foydaci qayd qilingan. Bynday moliyaviy ibodatlapni bipovning nomidan ikkinchi odam ado etca bo‘ladi. Micol ychyn, mol egaci zakotni hicoblab chiqapib, haqdoplapga bepishni boshqa bip kishidan iltimoc qilca bo‘ladi. Yoki bipovga pyl bepib, o‘zining nomidan cadaqa qilib qo‘yishni co‘paca bo‘ladi.
@@ -512,6 +545,7 @@ Hanafiy mazhabi ylamolapi hajni bipovning o‘pniga boshqa odam ado etca bo‘la
 
 @dp.callback_query(F.data == "hajning_besh_kuni")
 async def hajning_besh_kuni(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Hajning birinchi kuni: zul-hijjaning sakkizinchi kuni hajning birinchi kuni hisoblanadi. Shu kuni quyidagi amallar qilinadi:
 Bomdod namozidan keyin Mino tomonga ravona bo‘linadi;
@@ -522,8 +556,13 @@ Hajning uchinchi kuni: zul-hijjaning o‘ninchi kuni hajning uchinchi kuni hisob
 1. Muzdalifada bomdod namozini o‘qigandan keyin, quyosh chiqishidan oldin vuquf qilinadi. Quyosh chiqishidan biroz avval Minoga ravona bo‘linadi;
 2. Minoga kelib, avval Jamrai Aqabaga tosh otiladi. Jamrai Aqabaga tosh otishning eng afzal vaqti zul-hijjaning o‘ninchi kuni quyosh chiqqandan boshlab zavolgachadir. Aslida zavoldan keyin tosh otilsa ham karohiyatsiz durust bo‘laveradi. Lekin quyosh botishi bilan tosh otish uchun makruh vaqt kiradi. Agar shomgacha tiqilinch bo‘lib, bu tiqilinch shomdan keyin ham davom etsa, Jamrai Aqabaga quyosh botgandan keyin tosh otish makruh bo‘lmaydi. Zul-hijjaning o‘ninchi kuni Jamrai Aqabada yigirma to‘rt soat tosh otish joizdir;
 3. Agar hoji tamattu’ yoki qiron hajiga niyat qilgan bo‘lsa, o‘ninchi zul-hijja kuni shaytonga tosh otgandan keyin qurbonlik qiladi;
-""")
-    await callback.message.answer(text="""
+""",reply_markup=admin_keyboard.hajning_besh_kuni)
+
+
+@dp.callback_query(F.data == "davomi_hajning_besh_kuni")
+async def hajning_besh_kuni(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text="""                                  
 4. Agar hoji tamattu’ yoki qiron hajiga niyat qilgan bo‘lmasa, Jamrai Aqabadan keyin sochini oldiradi. Agar tamattu’ yoki qiron hajiga niyat qilgan bo‘lsa, sochni qurbonlikdan keyin oldiradi;
 5. Hajning eng muhim rukni va farzi ziyorat tavofidir. O‘ninchi zul-hijja kuni imkoni boricha ziyorat tavofini qilish afzal va yaxshidir. Agar tavofi ziyoratni shu kuni qilishning imkoni bo‘lmasa, o‘n birinchi, o‘n ikkinchi kunlarigacha kechiktirish mumkin, lekin o‘n ikkinchi zul-hijjaning quyoshi botishidan avval ziyorat tavofidan forig‘ bo‘lish vojibdir. O‘ninchi zul-hijjada qilinadigan amallar ado etilgach, Minoga kelib, o‘ninchi kecha shu yerda o‘tkaziladi. O‘n birinchi, o‘n ikkinchi kechalarni Minoda o‘tkazish sunnatdir.
 Hajning to‘rtinchi kuni: Hajning to‘rtinchi kuni zul-hijjaning o‘n birinchi kuniga to‘g‘ri keladi. U kunda faqat bir amal qilinadi. Bu amal zavoldan keyin uchta jamarotga tosh otishdir. U kunning toshlarini zavoldan ilgari otish joiz emas, aksincha, zavoldan keyin, quyosh botishidan avval tosh otish afzaldir. Quyosh botgandan keyin esa makruh vaqt boshlanadi. Tiqilinch sababli u kunning toshlarini otish shomdan keyinga surilib ketsa, subhi sodiqdan avvalroqqacha tosh otish karohiyatsiz durust bo‘ladi. Tosh otishni uzrsiz ortga surish makruhdir, lekin tosh otishni kechiktirgani uchun hojining zimmasiga hech narsa vojib bo‘lmaydi. Keyingi kunning subhi tugaguncha shaytonga tosh otib olmasagina hojining zimmasiga jonliq so‘yish vojib bo‘ladi. O‘n ikkinchi kunning zavolidan keyin bu amalning qazosini qilish lozim bo‘ladi. O‘n birinchi kunning toshini otish vaqti o‘n ikkinchi kunning subhi kirgunicha davom etadi. Bu taxminan 16-17 soatni tashkil qiladi. O‘n birinchi kunning kechasini Minoda o‘tkazish sunnatdir.
@@ -531,6 +570,3 @@ Hajning beshinchi kuni: Hajning beshinchi kuni zul-hijjaning o‘n ikkinchi kuni
 Agar hoji o‘n uchinchi kunning subhi sodig‘igacha Minoda qolib ketsa, bu kunning toshini ham otish lozim bo‘lib qoladi. O‘n uchinchi kunning toshini otish ham rojih qavlga binoan zavoldan keyin boshlanadi. Abu Hanifa rahmatullohi alayhning nazdida zavoldan oldin tosh otish joiz bo‘lsa-da, makruhdir. O‘n uchinchi kunning quyoshi botgach, shaytonga tosh otish vaqti batamom tugaydi.                                                                    
 
 """,reply_markup=admin_keyboard.haj_ortga)
-#--------------=============    
-
-

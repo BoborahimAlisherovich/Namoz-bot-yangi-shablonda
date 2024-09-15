@@ -39,7 +39,7 @@ async def ism_func(message: Message):
         await message.answer(text="Serverda Xatolik yuz berdi")
 
 # Namoz vaqtlarini tanlash
-@dp.message(F.text == "⌛️NAMOZ VAQTLARI⌛️")
+@dp.message(F.text == "NAMOZ VAQTLARI")
 async def namoz_vaqti(message: Message):
     await message.answer(text="Hududingizni tanlang", reply_markup=admin_keyboard.hudud)
 

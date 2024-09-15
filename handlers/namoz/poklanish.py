@@ -6,9 +6,15 @@ from loader import dp
 # Tahorat haqida ma'lumot berish
 @dp.message(F.text == "TAHORAT")
 async def massaeg(messaga: Message):
-    await messaga.answer("""
-Tahorat uchun suv hozirlagandan keyin:
+    await messaga.answer("""TAHORAT """,reply_markup=admin_keyboard.ruza_buttan)
 
+
+# Tahorat haqida batafsil ma'lumot berish (callback query)
+@dp.callback_query(F.data == 'erkaklar_tahorat')
+async def erkaklar_tahorat(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text="""
+Tahorat uchun suv hozirlagandan keyin:
 1. Qibla tomonga qarab, ichida „Tahorat olishni niyat qildim“ deyiladi.
 2. Auzu billahi minash-shaytonir rojiym. Bismillahir rohmanir rohiym“, deyiladi.
 3. Qoʻllar bandigacha 3 marta yuviladi.
@@ -21,14 +27,25 @@ Tahorat uchun suv hozirlagandan keyin:
 10. Ikkala kaftning orqasi bilan boʻyin masx qilinadi.
 11. Chap qoʻl bilan oʻng oyoqni oshiq qismi bilan qoʻshib, barmoqlar orasini ishqalab 3 marta yuviladi, keyin chap oyoq.
 12. Qibla tomonga qarab, ichida „Ashhadu an La ilaha illallohu va ashhadu anna Muhammadan abduhu va rosuluh“ deyiladi. 
+                       
+<a href= 'https://t.me/mukammal_namoz/51'>Bizning kanal📢</a>
+""", reply_markup=admin_keyboard.tahorat_orqa_button)
 
-                         
-<a href= 'https://t.me/namoz_uqishni_urganish_Kanal/21'>Bizning kanal📢</a>
-""", reply_markup=admin_keyboard.tahorati)
+@dp.callback_query(F.data == 'ayollr_tahorat')
+async def ayollr_tahorat(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text="""Tahorat ayollar uchun <a href = 'https://t.me/mukammal_namoz/52'>Bizning kanal📢</a>   """,reply_markup=admin_keyboard.tahorat_orqa_button)
+
+@dp.callback_query(F.data == 'tahorat_button_orqga')
+async def tahorat_button_orqga(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text="""TAHORAT""",reply_markup=admin_keyboard.ruza_buttan)
+
 
 # Tahorat haqida batafsil ma'lumot berish (callback query)
 @dp.callback_query(F.data == 'tarif')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Tahorat — namoz oʻqish, ibodat oldidan yuvinish, poklanish jarayoni. Xususiy shakli sifatida tayammum koʻriladi. Islomda tahoratning ikki turi mavjud: vuzuʼ — kichik tahorat — qoʻloyoq va yuzni yuvish; gʻusul — katta tahorat — toʻla yuvinish, choʻmilish.
 
@@ -46,6 +63,7 @@ Bu farzlardan birortasi bajarilmasa, tahorat haqiqiy boʻlmaydi.
 # G'usl haqida ma'lumot
 @dp.message(F.text == "G'USL")
 async def massaeg(messaga: Message):
+   
     await messaga.answer(
         text="""
 GʻUSLNING FARZLARI[2]
@@ -65,7 +83,7 @@ Magar yoʻldan oʻtuvchi boʻlsa, mayli“, degan (43-oyat).
 Ushbu ikki oyatda ogʻiz, burun va badanning barchasini yuvish maʼnosi bor. 
 Abu Hurayra roziyalloxu anhudan rivoyat qilinadi
 
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/39'>Bizning kanal</a>
+<a href='https://t.me/mukammal_namoz/53'>Bizning kanal</a>
 
 """, 
         reply_markup=admin_keyboard.Admin

@@ -3,14 +3,20 @@ from aiogram import  F
 from aiogram.types import Message,CallbackQuery
 from loader import dp
 
-
  #  zakot = ==============---
 @dp.message(F.text=="ZAKOT")
 async def message(message:Message):
-    await message.answer(text="ZAKOT",reply_markup=admin_keyboard.zakot)  
+    await message.answer(text="ZAKOT  <a href='https://t.me/mukammal_namoz/87'>Bizning kanal</a>   ",reply_markup=admin_keyboard.zakot)  
+
+
+@dp.callback_query(F.data == "zakot_orqa_button")
+async def zakot_nima(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text=""" Zakot <a href='https://t.me/mukammal_namoz/87'>Bizning kanal</a> """,reply_markup=admin_keyboard.zakot)
 
 @dp.callback_query(F.data == "zakot_nima")
 async def zakot_nima(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 «Zakot» so‘zi lug‘atda «poklik» va «o‘sish» degan ma’nolarni anglatadi. Zakot bergan kishining moli poklanadi. Qachon zakotini bersa, poklanadi, bo‘lmasa yo‘q. Zakoti berilgan molga baraka kiradi, ko‘payib, o‘sadi.
 Shar’iy istilohda «Zakot – maxsus moldan maxsus juzni maxsus shaxsga Allohning roziligi uchun shariatda tayin qilingandek mulk qilib berishdir».
@@ -27,6 +33,7 @@ Zakot ibodati nafaqat zakot beruvchi va zakot oluvchiga, balki jamiyatga ham ulk
   
 @dp.callback_query(F.data == "fiqh_hukumlari")
 async def fiqh_hukumlari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Zakotberuvchida bo‘lishi lozim shartlar:
 1. Musulmon bo‘lish.
@@ -55,6 +62,7 @@ Hanafiy mazhabi bo‘yicha, aqli zaif yoki yosh bolaga zakot berib bo‘lmaydi.
  
 @dp.callback_query(F.data == "chorvaning_zakoti")
 async def chorvaning_zakoti(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Chorva hayvonlari zakotining shartlari:
 1. Yaylovdao‘tlaydigan bo‘lishi.
@@ -88,6 +96,7 @@ Demak, tijorat uchun boqiladigan ot, xachir va eshaklardan zakot olinadi.
 
 @dp.callback_query(F.data == "naqtdan_olinadigan_zakot")
 async def naqtdan_olinadigan_zakot(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Naqd puldan qanday qilib zakot chiqariladi? Uning shartlari qanday?
 Naqd puldan zakot chiqarish farz bo‘lishi uchun unda quyidagi shartlar mavjud bo‘lishi lozim:
@@ -107,6 +116,7 @@ Hojati asliyadan ortiq bo‘lishi kerak.  Deylik, bir kishining qo‘lida nisobg
 
 @dp.callback_query(F.data == "tijorat_moli")
 async def tijorat_moli(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Sotib olingan har bir narsa ham tijorat moli bo‘lavermaydi, chunki ularning orasida shaxsiy va oilaviy foydalanish uchun narsalar ham bo‘ladi. Faqatgina sotish, foyda olish niyatida xarid qilingan narsagina tijorat moli hisoblanadi.
 Ulamolarimiz: «Tijoratda ikkita asosiy unsur: niyat va amal bor», deyishadi. Niyat – foyda ko‘rish maqsadi bo‘lsa, amal – oldi-sotdidir. Ushbu ikki unsur bir bo‘lgandagina, tijorat bo‘ladi. Biri bo‘lib, ikkinchisi bo‘lmasa, tijorat bo‘lmaydi.
@@ -128,6 +138,7 @@ Zakotga beriladigan hayvon o‘rniga uning qiymatini bersa bo‘ladimi? Hanafiy 
 
 @dp.callback_query(F.data == "taqinchoqlar_zakoti")
 async def taqinchoqlar_zakoti(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Ushbu masalada fiqhiy mazhablar ikkiga bo‘linishgan:
 1. Hanafiy mazhabi: «Ayollarning taqinchoqlaridan zakot chiqariladi», degan.
@@ -143,6 +154,7 @@ Ulamolarimizdan ba’zilari: «Bunday idish va buyumlarning nisobga yetganini an
 
 @dp.callback_query(F.data == "toshlar_zakoti")
 async def toshlar_zakoti(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Tog‘dan topilgan feruzadan zakot berilmaydi, chunki bunga o‘xshash narsalar tuz kabi yerning bir bo‘lagi hisoblanadi.
 Shuningdek, marvarid, la’l, zumrad, olmos, yoqut kabi narsalardan zakot berilmaydi, chunki bu narsalar o‘smaydigan mol hisoblanib, faqat ayollarning zebu ziynati sifatida ishlatiladi.
@@ -174,6 +186,7 @@ Tarkidunyo qilib, ibodatga berilgan odamga zakotdan ulush berilmaydi.
     
 @dp.callback_query(F.data == "zakot_beruvchi")
 async def zakot_beruvchi(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Zakotni ado qiluvchi bandaning zimmasida bajarishi lozim bo‘lgan quyidagi vazifalar bor:
 1. Zakotdan murod nimaligini fahmlashi kerak. U uch narsadan iborat: Alloh taoloning muhabbatini da’vo qiluvchini o‘zi muhabbat qo‘ygan narsasini chiqarishi bilan sinash; halokatga olib boruvchi baxillik sifatidan poklanish; mol-mulk ne’matiga shukr qilish.

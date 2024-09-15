@@ -1,6 +1,5 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton    
 # Admin uchun klaviatura
 admin_button = ReplyKeyboardMarkup(
     keyboard=[
@@ -17,7 +16,7 @@ admin_button = ReplyKeyboardMarkup(
 start_buttonnew = ReplyKeyboardMarkup(
     keyboard=[
         [KeyboardButton(text="NAMOZ"),
-        KeyboardButton(text="⌛️NAMOZ VAQTLARI⌛️") ],
+        KeyboardButton(text="NAMOZ VAQTLARI") ],
         [KeyboardButton(text="TAHORAT"),
         KeyboardButton(text="G'USL") ],
        [KeyboardButton(text="SURALAR"),
@@ -98,12 +97,12 @@ qushimcha = InlineKeyboardMarkup(
         [InlineKeyboardButton(text="Fil surasi", callback_data="fil_sura"),
          InlineKeyboardButton(text="Quraysh surasi", callback_data="quraysh_")],
          [InlineKeyboardButton(text="Ma'un surasi", callback_data="maun_surasi"),
-         InlineKeyboardButton(text="Kavsar surasi", callback_data="kavsar_")],
+         InlineKeyboardButton(text="Kavsar surasi", callback_data="_qushimcha")],
           [InlineKeyboardButton(text="Kofirun surasi", callback_data="kofirun"),
          InlineKeyboardButton(text="Nasr surasi", callback_data="nasr_")],
            [InlineKeyboardButton(text="Masad surasi", callback_data="masad_surasi"),
          InlineKeyboardButton(text="Ixlos surasi", callback_data="ixlos_1")],
-          [InlineKeyboardButton(text="Falaq", callback_data="falaq_"),
+          [InlineKeyboardButton(text="Falaq", callback_data="falaq_sura"),
          InlineKeyboardButton(text="Nas surasi", callback_data="nas")],
          [InlineKeyboardButton(text="🏠 Bosh Menyu", callback_data="qaytish")],
          
@@ -185,6 +184,8 @@ SURAH_NAMES = [
     ("Masad", "masad"), ("Ixlos", "ixlos"), ("Falaq", "falaq"), ("Nos", "nos_quron")
 ]
 
+
+
 # Hudud tanlash klaviaturasi
 hudud = ReplyKeyboardMarkup(
     keyboard=[
@@ -211,6 +212,21 @@ hudud = ReplyKeyboardMarkup(
 Admin = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="🏠 Bosh Menyu", callback_data="qaytish")],
+    ]
+)
+
+
+ehromdagi_amallar = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text="Davomini uqish", callback_data="davomi_ehromdagi_amallar")],
+    ]
+)
+
+
+hajning_besh_kuni  = InlineKeyboardMarkup(
+
+ inline_keyboard=[
+        [InlineKeyboardButton(text="Davomini uqish", callback_data="davomi_hajning_besh_kuni")],
     ]
 )
 
@@ -241,7 +257,6 @@ orqaga_qayt = InlineKeyboardMarkup(
 # Ayollar uchun namoz bo'limi klaviaturasi
 ayol_namoz = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="Ayollarga xos xolatlar", callback_data="xolat")],
         [InlineKeyboardButton(text="Bomdod nomozi", callback_data="bomdod2")],
         [InlineKeyboardButton(text="Peshin nomozi", callback_data="peshin2")],
         [InlineKeyboardButton(text="Asr nomozi", callback_data="asr2")],
@@ -360,6 +375,25 @@ zakot_orqa_button = InlineKeyboardMarkup(
      ]
 )
 
+
+ruza_buttan  = InlineKeyboardMarkup(
+    inline_keyboard=[
+         [InlineKeyboardButton(text="Erkaklar",callback_data="erkaklar_tahorat")],
+        [InlineKeyboardButton(text="Ayollar",callback_data="ayollr_tahorat")],
+        [InlineKeyboardButton(text="🏠 Bosh Menyu", callback_data="qaytish")],
+    ]
+)
+
+
+
+rozani_buzadigan_amal = InlineKeyboardMarkup(
+     inline_keyboard=[
+         [InlineKeyboardButton(text="Davomi",callback_data="rozani_buzadigan_amal_davomi")]
+     ]
+)
+
+
+
 ruza = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Ro'za qanday ibodat?",callback_data="zuza_qanday_ibodat"),],
@@ -375,6 +409,12 @@ ruza = InlineKeyboardMarkup(
            [InlineKeyboardButton(text="🏠 Bosh Menyu", callback_data="qaytish")],
     ]
 )
+
+
+
+tahorat_orqa_button = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text="orqaga",callback_data="tahorat_button_orqga"),],])
 
 
 ruza_button = InlineKeyboardMarkup(

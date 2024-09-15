@@ -8,16 +8,18 @@ from aiogram.fsm.context import FSMContext
 #Ro'za   ===-------------------==
 @dp.message(F.text=="Ro'za")
 async def message(message:Message):
-    await message.answer(text="Ro'za",reply_markup=admin_keyboard.ruza)  
+    await message.answer(text="Ro'za <a href='https://t.me/mukammal_namoz/88'>Bizning kanal</a>",reply_markup=admin_keyboard.ruza)  
 
 
 @dp.callback_query(F.data == "ruza_button_orqga")
 async def ruza_button_orqga(callback: CallbackQuery):
-    await callback.message.answer(text="""Ro'za""",reply_markup=admin_keyboard.ruza) 
+    await callback.message.delete()
+    await callback.message.answer(text="""Ro'za <a href='https://t.me/mukammal_namoz/88'>Bizning kanal</a>""",reply_markup=admin_keyboard.ruza) 
 
 
 @dp.callback_query(F.data == "zuza_qanday_ibodat")
 async def zuza_qanday_ibodat(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Shar’iy istilohda esa Ramazon oyida tong otganidan to quyosh botguncha niyat bilan ovqat yemaslik, ichimlik ichmaslik, jinsiy yaqinlik qilmaslik «ro‘za» deyiladi. Ro‘za tutish Islom dinining besh rukni, besh asosidan biridir, Qur’on va Sunnat bilan sobit bo‘lgan.
 Ro‘za aqli raso, sog‘lig‘i yaxshi bo‘lgan har bir musulmon erkakka hamda hayz va nifosdan pok bo‘lgan musulmon ayolga farz qilingan. Hayz va nifos ko‘rgan ayollar ro‘za tutishmaydi, keyin qoldirgan kunlarining qazosini tutib berishadi. Yangi oyni ko‘rib, ro‘zaga niyat qilish Ramazon ro‘zasining asosiy shartlaridandir. Ramazon oyida noshar’iy amallar qilmaslik, tilni g‘iybat, yolg‘on so‘zlardan tiyish, o‘zgaga ozor bermaslik, yaxshi xulqli va rahm-shafqatli bo‘lish ro‘zaning odoblaridandir.
@@ -29,6 +31,7 @@ Nafsni poklash va axloqni sayqallashda namoz va zakotdan keyin ro‘za ibodati k
 
 @dp.callback_query(F.data == "ruzaning_darajalari")
 async def ruzaning_darajalari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Ahli haqning nazdida ro‘zaning darajasi uchtadir:
 Birinchi daraja ommaning ro‘zasi bo‘lib, u qorin va farjning istak-xohishlaridan tiyilishdir.
@@ -47,6 +50,7 @@ Ramazon ibodatlarni ko‘paytirish, gunohlarga mag‘firat so‘rash, Qur’on b
     
 @dp.callback_query(F.data == "ruzaning_shartlari")
 async def ruzaning_shartlari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Ro‘za durust bo‘lishi uchun uch xil shart topilishi lozim.
 Birinchi shart – zimmaga lozim bo‘lish shartlari.
@@ -73,6 +77,7 @@ Shar’iy kunduz tong otgandan (subhi sodiqdan) boshlanib, quyosh botguncha davo
 
 @dp.callback_query(F.data == "ruzaning_turlari")
 async def ruzaning_turlari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Ro‘zaning turlari to‘rttadir:
 Lozim ro‘za.
@@ -97,6 +102,7 @@ i) E’tikofini buzib qo‘ygan kishining qazo ro‘zasi.
 
 @dp.callback_query(F.data == "ruza_tutishga_harom_kunlar")
 async def ruza_tutishga_harom_kunlar(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Ro‘za tutish harom bo‘lgan kunlar quyidagilardir:
 1. Iydul-fitr kuni, Iydul-azho kuni va undan keyingi uch kun. Bu kunlarda ro‘za tutish haromdir, chunki bu kunlar xursandchilik kunlaridir.
@@ -107,6 +113,7 @@ Ro‘za tutish harom bo‘lgan kunlar quyidagilardir:
     
 @dp.callback_query(F.data == "ruza_tutishga_makruh_kunlar")
 async def ruza_tutishga_makruh_kunlar(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Quyidagi kunlarda ro‘za tutish makruhdir:
 1. Ayol kishining erining iznisiz yoki roziligini bilmay turib nafl ro‘za tutishi (agar er yaqinlikka ojizlik qiladigan darajada bemor bo‘lsa, yoki ro‘zador bo‘lsa, yoxud haj yo umraga ehrom bog‘lagan bo‘lsa, makruh emas).
@@ -125,6 +132,7 @@ Quyidagi kunlarda ro‘za tutish makruhdir:
 
 @dp.callback_query(F.data == "ruzaning_niyati")
 async def ruzaning_niyati(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 «Niyat» so‘zi lug‘atda «qasd qilish» ma’nosini anglatadi. Shar’iy istilohda esa niyat deb qalbning bir ishni qilishga azmu qaror ila, ikkilanishsiz e’tiqod qilishiga aytiladi. Demak, kishi qalbida ertaga Ramazonning kunlaridan biri ekanini bilsa va ro‘za tutishni ko‘nglidan o‘tkazsa, niyat qilgan bo‘ladi.
 Niyat masalasida ro‘zalar ikkiga bo‘linadi:
@@ -141,6 +149,7 @@ Quyosh botishi bilan ertangi kunning ro‘zasini niyat qilsa, niyati durust bo�
 
 @dp.callback_query(F.data == "saharlik_va_iftorlik")
 async def saharlik_va_iftorlik(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Alloh taoloning har bir amri hikmatlarga boydir. «Allohning rahmati bahona qidirur» degan mashhur maqol bor. Alloh bu ummatga rahmatini yog‘dirishni iroda qilib, O‘z Payg‘ambari orqali saharlik va iftorlik qilishni sunnat qildi.
 Musulmon kishi qorni to‘q bo‘lsa ham, taomga ehtiyoji bo‘lmasa ham saharlikda birorta xurmo yoki bir-ikki qultum suv ichib olsa, Payg‘ambarimiz alayhissalomning sunnatlariga ergashgan bo‘ladi. Zero, Anas ibn Molik roziyallohu anhu u zotning «Saharlik qilinglar, saharlikda baraka bor», deganlarini aytgan.
@@ -153,6 +162,7 @@ Sahl ibn Sa’d roziyallohu anhudan rivoyat qilinadi:
     
 @dp.callback_query(F.data == "ruzaning_mustahablari")
 async def ruzaning_mustahablari(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 uyidagi amallar ro‘zaning mustahablaridir:
 1. Biror narsa bilan, bir qultum suv bilan bo‘lsa ham saharlik qilish, saharlikni kechaning oxirigacha surish.
@@ -168,6 +178,7 @@ uyidagi amallar ro‘zaning mustahablaridir:
     
 @dp.callback_query(F.data == "ro'zani_buzadigan_amal")
 async def ruzani_buzadigan_amal(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 o‘zaning buzilishi ikki xil bo‘ladi.
 Birinchisi – qazo va kafforatni vojib qiladigan holatlar.
@@ -190,8 +201,13 @@ Qazo tutish lozim bo‘ladigan, kafforat lozim bo‘lmaydigan holatlar:
 8. Quloqqa moy tomizilsa ham ro‘za ochiladi. Suv tomizilsa ochilmaydi.
 9. Qasddan og‘zi to‘lib qayt qilsa ham qazo tutiladi. Agar beixtiyor, og‘zi to‘lmay qayt qilsa yoki taom emas, balg‘am qayt qilsa, ro‘za ochilmaydi.
 10. Gʻizo va dorinini bemorlik, safar, majburlash, adashish, beparvolik yoki shubha kabi shar’iy uzrlar bilan tanovul qilsa, ro‘za ochilib, qazosi tutiladi.
-""")
-    await callback.message.answer(text="""
+""",reply_markup=admin_keyboard.rozani_buzadigan_amal)
+    
+
+@dp.callback_query(F.data == "rozani_buzadigan_amal_davomi")
+async def ruzani_buzadigan_amal(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(text="""                                
 11. Og‘iz chayilayotganda beixtiyor ichiga suv ketib qolsa, ro‘za ochiladi va qazo tutiladi.
 12. Boshdagi yoki qorindagi jarohatga qo‘yilgan dori ichiga yoki dimog‘iga ketib qolishi.
 13. Uxlab yotgan odamning qorniga suv kiritib yuborilsa, ro‘zasi ochiladi.
@@ -207,3 +223,5 @@ Qazo tutish lozim bo‘ladigan, kafforat lozim bo‘lmaydigan holatlar:
 23. Ramazon ro‘zasidan boshqa ro‘zasini ochib yuborgan kishiga faqat qazo tutish vojib bo‘ladi, kafforat vojib bo‘lmaydi.
 
 """,reply_markup=admin_keyboard.ruza_button)
+
+   

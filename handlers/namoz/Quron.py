@@ -1,11 +1,14 @@
 
 from aiogram.types import CallbackQuery,Message
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.types import InlineKeyboardButton
 from loader import dp
 from keyboard_buttons import admin_keyboard
 from aiogram import F
 
+
 ITEMS_PER_PAGE = 20
+
 
 def get_paginated_keyboard(page=0):
     start = page * ITEMS_PER_PAGE
@@ -13,43 +16,54 @@ def get_paginated_keyboard(page=0):
     surah_page = admin_keyboard.SURAH_NAMES[start:end]
 
     keyboard_builder = InlineKeyboardBuilder()
-    
+
+    # Add two Surah buttons per row
     for name, callback_data in surah_page:
         keyboard_builder.button(text=name, callback_data=callback_data)
     
-    keyboard_builder.adjust(2)  # Adjust buttons in rows of 2
+    keyboard_builder.adjust(2)  # Arrange buttons in rows of two
 
-    # Add Previous and Next buttons in a new row
+    # Add "Orqaga" and "Keyingi" buttons
     pagination_buttons = []
     if page > 0:
-        pagination_buttons.append(("⬅️ Oldinga", f"page_{page-1}"))
+        pagination_buttons.append(InlineKeyboardButton(text="⬅️ Orqaga", callback_data=f"page_{page-1}"))
     if end < len(admin_keyboard.SURAH_NAMES):
-        pagination_buttons.append(("➡️ Keyingi", f"page_{page+1}"))
-    
-    # If there are pagination buttons, add them in a new row
+        pagination_buttons.append(InlineKeyboardButton(text="➡️ Keyingi", callback_data=f"page_{page+1}"))
+
+    # If there are pagination buttons, add them as a row
     if pagination_buttons:
-        for text, callback_data in pagination_buttons:
-            keyboard_builder.button(text=text, callback_data=callback_data)
-        keyboard_builder.adjust(2)  # Ensure pagination buttons are in a new row
+        keyboard_builder.row(*pagination_buttons)
+
+    # Ensure only one "Bosh menyu" button is added below pagination buttons
+    keyboard_builder.row(InlineKeyboardButton(text="🏠 Bosh menyu", callback_data="qaytish"))
 
     return keyboard_builder.as_markup()
 
+
+# Handle the "QURON" message to show Surah list
 @dp.message(F.text == "QURON")
 async def show_surah_list(message: Message):
     keyboard = get_paginated_keyboard(page=0)
-    print("salom")
     await message.answer("Tanlang:", reply_markup=keyboard)
 
+# Handle pagination callback
 @dp.callback_query(F.data.startswith("page_"))
 async def paginate_callback(query: CallbackQuery):
     page = int(query.data.split("_")[1])
     keyboard = get_paginated_keyboard(page)
     await query.message.edit_reply_markup(reply_markup=keyboard)
 
+
+
+
+#fotiha surasi
 @dp.callback_query(F.data == "orqaga_qaytamiz")
-async def qaytar_handler(callback: CallbackQuery):
-    await callback.message.answer(text="Menyulardan birini tanlang", reply_markup=get_paginated_keyboard(page=0))
+async def fotiha(callback: CallbackQuery):
     await callback.message.delete()
+    keyboard = get_paginated_keyboard(page=0)
+    await callback.message.answer(text="""Quron """,reply_markup=keyboard
+    )
+    
 
 #fotiha surasi
 @dp.callback_query(F.data == "fotiha_quron")
@@ -57,18 +71,19 @@ async def fotiha(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Makkiy, 7 oyatdan iborat
-<a href='https://t.me/mukammal_namoz/3'>Bizning kanal📢</a> """,
+<a href='https://t.me/mukammal_namoz/91'>Bizning kanal📢</a> """,
    reply_markup=admin_keyboard.orqaga_qayt,
         parse_mode="HTML"
     )
     
+
 #baqara
 @dp.callback_query(F.data == "baqara")
 async def baqar(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text=""" 
  Makkiy, 286 oyatdan iborat                                  
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/77'>Bizning kanal📢</a>  """,
+<a href='https://t.me/mukammal_namoz/92'>Bizning kanal📢</a>  """,
  parse_mode="html", 
 reply_markup=admin_keyboard.orqaga_qayt
 ) 
@@ -79,7 +94,7 @@ async def oli_imron(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  
  Makkiy, 200 oyatdan iborat 
-    <a href='https://t.me/namoz_uqishni_urganish_Kanal/78'>Bizning kanal📢</a>  """,
+    <a href='https://t.me/mukammal_namoz/93'>Bizning kanal📢</a>  """,
  parse_mode="html",  # To'g'ri joylash
 reply_markup=admin_keyboard.orqaga_qayt
 ) 
@@ -90,21 +105,21 @@ async def niso(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  
 Makkiy, 200 oyatdan iborat 
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/79'>Bizning kanal📢</a> """,reply_markup=admin_keyboard.orqaga_qayt) 
+<a href='https://t.me/mukammal_namoz/94'>Bizning kanal📢</a> """,reply_markup=admin_keyboard.orqaga_qayt) 
 
 @dp.callback_query(F.data == "moida")
 async def peshin(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text=""" 
 Makkiy, 120 oyatdan iborat 
-    <a href='https://t.me/namoz_uqishni_urganish_Kanal/83'>Bizning kanal📢</a> """,reply_markup=admin_keyboard.orqaga_qayt) 
+    <a href='https://t.me/mukammal_namoz/95'>Bizning kanal📢</a> """,reply_markup=admin_keyboard.orqaga_qayt) 
 
 @dp.callback_query(F.data == "anom")
 async def moida(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  
 Makkiy, 165 oyatdan iborat
-    <a href='https://t.me/namoz_uqishni_urganish_Kanal/84'>Bizning kanal📢</a> """,reply_markup=admin_keyboard.orqaga_qayt) 
+    <a href='https://t.me/mukammal_namoz/96'>Bizning kanal📢</a> """,reply_markup=admin_keyboard.orqaga_qayt) 
 
 @dp.callback_query(F.data == "arof")
 async def arof(callback: CallbackQuery):
@@ -973,7 +988,7 @@ Makkiy, 4 oyatdan iborat
   <a href=''>Bizning kanal📢</a>
  """,reply_markup=admin_keyboard.orqaga_qayt) 
 
-@dp.callback_query(F.data == "falaq ")    
+@dp.callback_query(F.data == "falaq")    
 async def falaq(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  

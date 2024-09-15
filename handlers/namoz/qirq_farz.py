@@ -12,6 +12,8 @@ async def namoz_vaqti(message: Message):
     await message.answer(
         text="""
 40 farz
+<a href='https://t.me/mukammal_namoz/89'>Bizning kanal</a>   
+
 """,reply_markup=admin_keyboard.qiriq_farz)
     
 
@@ -119,4 +121,5 @@ async def uch_farz(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  
 40 farz
+ <a href='https://t.me/mukammal_namoz/89'>Bizning kanal</a>                                    
  """,reply_markup=admin_keyboard.qiriq_farz) 

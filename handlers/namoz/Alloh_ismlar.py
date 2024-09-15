@@ -109,20 +109,28 @@ allah_names = [
 ]
 
 NAMES_PER_PAGE = 9
+
 def get_pagination_keyboard(current_page):
     buttons = []
     if current_page > 0:
         buttons.append(InlineKeyboardButton(text="⬅️ Orqaga", callback_data=f"prev:{current_page - 1}"))
     if (current_page + 1) * NAMES_PER_PAGE < len(allah_names):
         buttons.append(InlineKeyboardButton(text="Oldinga ➡️", callback_data=f"next:{current_page + 1}"))
-    return InlineKeyboardMarkup(inline_keyboard=[buttons])
+
+    # "⬅️ Orqaga" va "Oldinga ➡️" tugmalari bitta qatorda bo'ladi
+    pagination_row = buttons
+
+    # "🏠 Bosh Menyu" tugmasi alohida qatorga qo'shiladi
+    menu_row = [InlineKeyboardButton(text="🏠 Bosh Menyu", callback_data="qaytish")]
+
+    return InlineKeyboardMarkup(inline_keyboard=[pagination_row, menu_row])
 
 def get_names_page(page):
     start = page * NAMES_PER_PAGE
     end = start + NAMES_PER_PAGE
-    return "\n".join(allah_names[start:end])
+    return "\n\n".join(allah_names[start:end])
 
-@dp.message(F.text=="99 TA ISMLAR")
+@dp.message(F.text == "99 TA ISMLAR")
 async def send_names(message: types.Message):
     await message.delete()
     current_page = 0
@@ -140,4 +148,3 @@ async def process_pagination(callback_query: types.CallbackQuery):
         reply_markup=get_pagination_keyboard(current_page)
     )
     await callback_query.answer()
-

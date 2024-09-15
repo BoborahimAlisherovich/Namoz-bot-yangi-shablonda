@@ -19,27 +19,6 @@ Allohu la ilaha illa huval hayyul qoyyum. La ta'xuzuhu sinatuv-va la nawm. Lahu 
 <a href='https://t.me/namoz_uqishni_urganish_Kanal/15'>Bizning kanal📢</a>
 """, reply_markup=admin_keyboard.qushimcha)
 
-@dp.callback_query(F.data == 'oyat')
-async def oyat(callback: CallbackQuery):
-    await callback.message.delete()
-    await callback.message.answer(text="""
-OYATAL KURSI
-
-Makkiy, 1 oyatdan iborat
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/23'>Bizning kanal📢</a>
-""", reply_markup=admin_keyboard.qushimcha)
-
-
-
-# Sano duosi haqida
-@dp.callback_query(F.data == 'sano')
-async def valyuta_back(callback: CallbackQuery):
-    await callback.message.delete()
-    await callback.message.answer(text="""
-Subhaanakalloouhumma va bihamdika va tabaaro kasmuka va ta’aalaa jadduka va laa ilaaha g‘oyruk...
-
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/29'>Bizning kanal📢</a>
-""", reply_markup=admin_keyboard.qushimcha)
 
 # Fotiha surasi haqida
 @dp.callback_query(F.data == 'fotiha')
@@ -50,15 +29,6 @@ Makkiy, 7 oyatdan iborat
 <a href='https://t.me/namoz_uqishni_urganish_Kanal/50'>Bizning kanal📢</a>
 """, reply_markup=admin_keyboard.qushimcha)
 
-@dp.callback_query(F.data == 'qunut')
-async def valyuta_back(callback: CallbackQuery,state:FSMContext):
-    await callback.message.delete()
-    await callback.message.answer(text="""
-Allohumma innaa nastaʼiynuka va nastagʻfiruk. Va nuʼminu bik va natavakkalu alayk. Va nusniy alaykal xoyro kullah. Nashkuruka va laa nakfuruk. Va naxlaʼu va natruku may yafjuruk. Allohumma iyyaka naʼbudu va laka nusolliy va nasjudu va ilayka nasʼaa va nahfidu. Narjuu rohmatak va naxshaa azaabak. Inna azaabaka bil kuffaari mulhiq.
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/50'>Bizning kanal📢</a>
-""", reply_markup=admin_keyboard.qushimcha)
-    await state.clear()
-
 
 
 # Callbacklar uchun handlerlar
@@ -67,27 +37,26 @@ async def kofirun_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Makkiy, 6 oyatdan iborat
-        <a href='https://t.me/namoz_uqishni_urganish_Kanal/34'>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text="audio <a href='https://t.me/namoz_uqishni_urganish_Kanal/45'>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+ <a href='https://t.me/namoz_uqishni_urganish_Kanal/45'>Bizning kanal📢</a>",    
+""", reply_markup=admin_keyboard.qushimcha)
+
 
 @dp.callback_query(F.data == 'ixlos_1')
 async def ixlos_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Makkiy, 4 oyatdan iborat                            
-    <a href='https://t.me/namoz_uqishni_urganish_Kanal/35'>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text="audio <a href='https://t.me/namoz_uqishni_urganish_Kanal/44'>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+    <a href=''>Bizning kanal📢</a> 
+""", reply_markup=admin_keyboard.qushimcha)
 
-@dp.callback_query(F.data == 'falaq_')
+
+@dp.callback_query(F.data == 'falaq_sura')
 async def falaq_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 5 oyatdan iborat                                    
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/36'>Bizning kanal📢</a>                                                     
-""")
-    await callback.message.answer(text=". <a href='https://t.me/namoz_uqishni_urganish_Kanal/43'>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+<a href=' '>Bizning kanal📢</a>                                                     
+""", reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'nas')
 async def nas_handler(callback: CallbackQuery):
@@ -95,28 +64,25 @@ async def nas_handler(callback: CallbackQuery):
     await callback.message.answer(text="""
  Makkiy, 6 oyatdan iborat   
     <a href='https://t.me/namoz_uqishni_urganish_Kanal/37'>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text=". <a href='https://t.me/namoz_uqishni_urganish_Kanal/42'>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+""", reply_markup=admin_keyboard.qushimcha)
 
-@dp.callback_query(F.data == 'kavsar')
-async def nas_handler(callback: CallbackQuery):
+@dp.callback_query(F.data == 'kavsar_qushimcha')
+async def kavsar_qushimcha(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 3 oyatdan iborat                                      
 <a href='https://t.me/namoz_uqishni_urganish_Kanal/65'>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text=". <a href='https://t.me/namoz_uqishni_urganish_Kanal/66'>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+""", reply_markup=admin_keyboard.qushimcha)
 
 
 
 @dp.callback_query(F.data == 'quraysh_')
-async def nas_handler(callback: CallbackQuery):
+async def quraysh_(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 4 oyatdan iborat   
     <a href='https://t.me/namoz_uqishni_urganish_Kanal/73'>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text=". <a href='https://t.me/namoz_uqishni_urganish_Kanal/72'>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+""", reply_markup=admin_keyboard.qushimcha)
 
 
 @dp.callback_query(F.data == 'nasr_')
@@ -125,17 +91,16 @@ async def nasr_handler(callback: CallbackQuery):
     await callback.message.answer(text="""
  Makkiy, 3 oyatdan iborat   
 <a href='https://t.me/namoz_uqishni_urganish_Kanal/38'>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text=". <a href='https://t.me/namoz_uqishni_urganish_Kanal/41'>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+""",reply_markup=admin_keyboard.qushimcha)
 
-@dp.callback_query(F.data == 'fil_quron')
+@dp.callback_query(F.data == 'fil_sura')
 async def fil_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 5 oyatdan iborat                          
 <a href=''>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text=". <a href=''>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+""", reply_markup=admin_keyboard.qushimcha)
+    
 
 @dp.callback_query(F.data == 'maun_surasi')
 async def maun_surasi(callback: CallbackQuery):
@@ -143,8 +108,7 @@ async def maun_surasi(callback: CallbackQuery):
     await callback.message.answer(text="""
  Makkiy, 7 oyatdan iborat                          
 <a href=''>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text=". <a href=''>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+""", reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'masad_surasi')
 async def masad_surasi(callback: CallbackQuery):
@@ -152,8 +116,8 @@ async def masad_surasi(callback: CallbackQuery):
     await callback.message.answer(text="""
  Makkiy, 5 oyatdan iborat                          
 <a href=''>Bizning kanal📢</a> 
-""")
-    await callback.message.answer(text=". <a href=''>Bizning kanal📢</a>", reply_markup=admin_keyboard.qushimcha)
+""", reply_markup=admin_keyboard.qushimcha)
+
 
 # duolar ---------=\
 @dp.message(F.text=="DUOLAR")
