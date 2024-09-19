@@ -10,3 +10,4 @@ from . import haj
 from . import iymon
 from . import zakot
 from . import ruza
+from . import ADMIN

@@ -30,7 +30,8 @@ start_buttonnew = ReplyKeyboardMarkup(
          [KeyboardButton(text="IYMON"),
         KeyboardButton(text="HAJ")],
          [KeyboardButton(text="ZAKOT"),
-        KeyboardButton(text="RO'ZA")]
+        KeyboardButton(text="RO'ZA")],
+        [KeyboardButton(text="ADMIN UCHUN XABAR")]
 
     ],
     resize_keyboard=True,
