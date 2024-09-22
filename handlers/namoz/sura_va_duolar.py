@@ -16,7 +16,7 @@ async def valyuta_back(callback: CallbackQuery):
     await callback.message.answer(text="""
 Allohu la ilaha illa huval hayyul qoyyum. La ta'xuzuhu sinatuv-va la nawm. Lahu ma fis-samavati va ma fil arz. Manzallaziy yashfa'u 'indahu illa bi'iznih...
 
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/15'>.</a>
+<a href='https://t.me/mukammal_namoz/205'>.</a>
 """, reply_markup=admin_keyboard.qushimcha)
 
 
@@ -26,9 +26,8 @@ async def valyuta_back(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Makkiy, 7 oyatdan iborat
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/50'>.</a>
+<a href='https://t.me/mukammal_namoz/91'>.</a>
 """, reply_markup=admin_keyboard.qushimcha)
-
 
 
 # Callbacklar uchun handlerlar
@@ -37,7 +36,7 @@ async def kofirun_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Makkiy, 6 oyatdan iborat
- <a href='https://t.me/namoz_uqishni_urganish_Kanal/45'>.</a>",    
+ <a href='https://t.me/mukammal_namoz/199'>.</a>",    
 """, reply_markup=admin_keyboard.qushimcha)
 
 
@@ -46,7 +45,7 @@ async def ixlos_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Makkiy, 4 oyatdan iborat                            
-    <a href=''>.</a> 
+    <a href='https://t.me/mukammal_namoz/202'>.</a> 
 """, reply_markup=admin_keyboard.qushimcha)
 
 
@@ -55,7 +54,7 @@ async def falaq_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 5 oyatdan iborat                                    
-<a href=' '>.</a>                                                     
+<a href='https://t.me/mukammal_namoz/203'>.</a>                                                     
 """, reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'nas')
@@ -63,7 +62,7 @@ async def nas_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 6 oyatdan iborat   
-    <a href='https://t.me/namoz_uqishni_urganish_Kanal/37'>.</a> 
+    <a href='https://t.me/mukammal_namoz/204'>.</a> 
 """, reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'kavsar_qushimcha')
@@ -71,7 +70,7 @@ async def kavsar_qushimcha(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 3 oyatdan iborat                                      
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/65'>.</a> 
+<a href='https://t.me/mukammal_namoz/198'>.</a> 
 """, reply_markup=admin_keyboard.qushimcha)
 
 
@@ -81,7 +80,7 @@ async def quraysh_(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 4 oyatdan iborat   
-    <a href='https://t.me/namoz_uqishni_urganish_Kanal/73'>.</a> 
+    <a href='https://t.me/mukammal_namoz/196'>.</a> 
 """, reply_markup=admin_keyboard.qushimcha)
 
 
@@ -90,7 +89,7 @@ async def nasr_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 3 oyatdan iborat   
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/38'>.</a> 
+<a href='https://t.me/mukammal_namoz/200'>.</a> 
 """,reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'fil_sura')
@@ -98,7 +97,7 @@ async def fil_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 5 oyatdan iborat                          
-<a href=''>.</a> 
+<a href='https://t.me/mukammal_namoz/195'>.</a> 
 """, reply_markup=admin_keyboard.qushimcha)
     
 
@@ -107,7 +106,7 @@ async def maun_surasi(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 7 oyatdan iborat                          
-<a href=''>.</a> 
+<a href='https://t.me/mukammal_namoz/197'>.</a> 
 """, reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'masad_surasi')
@@ -115,7 +114,7 @@ async def masad_surasi(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
  Makkiy, 5 oyatdan iborat                          
-<a href=''>.</a> 
+<a href='https://t.me/mukammal_namoz/201'>.</a> 
 """, reply_markup=admin_keyboard.qushimcha)
 
 
@@ -142,6 +141,7 @@ Payg‘ambarimizga mukammal va batamom salavotu durudlar bo‘lsin.
 Azonning hammasini eshitib bo‘lganidan keyin Rasululloh sollallohu alayhi vasallamga salovot aytib, ortidan mana bu duoni o‘qiydi:
 اللهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلاَةِ القَائِمَةِ آتِ مُحَمَّدًا الوَسِيلَةَ وَالفَضِيلَةَ وَابْعَثْهُ مَقَامًا مُحْمُودًا الَّذِي وَعَدْتَهُ
 «Allohumma robba hazihid da’vatit tammah vassolatil qoimah, ati Muhammadanil vasiylata val faziylah vab’ashu maqomam mahmudanillaziy va’adtah» (Ey bu komil duoning va qoim bo‘lgan namozning egasi Allohim, Muhammadga vasila va fazilat ber, u zotni va’da qilganing maqtovli maqomda tiriltir). So‘ngra xohlaganicha dunyoviy va uxroviy duolarni qilaveradi.
+<a href='https://t.me/mukammal_namoz/76'>.</a>                               
 """, reply_markup=admin_keyboard.duolar)
 
 @dp.callback_query(F.data == "sano_duosi")
@@ -151,7 +151,7 @@ async def sano_duosi(callback: CallbackQuery):
 SANO DUOSI
 Subhaanakalloouhumma va bihamdika va tabaaro kasmuka va ta’aalaa jadduka va laa ilaaha g‘oyruk
 Ma’nosi: «Allohim! Sening noming muborakdir. Shon sharafing ulug‘dir. Sendan o‘zga iloh yo‘qdir»
-                                 
+<a href='https://t.me/mukammal_namoz/77'>.</a>                                  
 """, reply_markup=admin_keyboard.duolar)
 
 @dp.callback_query(F.data == "rukudan_turkanda")
@@ -191,7 +191,8 @@ async def tashahhud(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 «Attahiyyatu lillahi vassolavatu vat­toy­yibat. Assalamu ’alayka ayyuhan-nabiyyu va rohmatullohi vabarokatuh. Assalamu ’alayna va a’laa ibaadillaahis solihiyn. Ashhadu allaa ilaaha illallohu va ashhadu anna Muhammadan ’abduhu va rosuluh».
-Ma’nosi: «Barokatli tabriklar va pokiza salavotlar Alloh uchundir. Ey Nabiy! Senga salom, Allohning rahmati va barakasi bo‘lsin. Bizlarga va Allohning solih bandalariga salom bo‘lsin. Allohdan o‘zga iloh yo‘q deb guvohlik beraman va albatta, Muhammad – Allohning Rasuli deb guvohlik beraman».                             
+Ma’nosi: «Barokatli tabriklar va pokiza salavotlar Alloh uchundir. Ey Nabiy! Senga salom, Allohning rahmati va barakasi bo‘lsin. Bizlarga va Allohning solih bandalariga salom bo‘lsin. Allohdan o‘zga iloh yo‘q deb guvohlik beraman va albatta, Muhammad – Allohning Rasuli deb guvohlik beraman».         
+<a href='https://t.me/mukammal_namoz/78'>.</a>                                                      
 """, reply_markup=admin_keyboard.duolar)
 
 @dp.callback_query(F.data == "salovatlar")
@@ -202,6 +203,7 @@ async def salovatlar(callback: CallbackQuery):
 Allohumma barik ’alaa Muhammadiv va ’alaa ali Muhammad. Kama barokta ’alaa Ibrohima va ’alaa ali Ibrohim. Innaka hamidum majid».
 Ma’nosi: Allohim! Ibrohimga va Ibrohimning ahli baytlariga O‘z rahmatingni nozil qilganingdek, Muhammadga va Muhammadning oila a’zolariga O‘zingning ziyoda rahmatlaringni nozil qilgin! Albatta, Sen maqtalgan, ulug‘langan Zotsan!
 Allohim! Ibrohimga va Ibrohimning ahli baytlariga O‘z barakangni nozil qilganingdek, Muhammadga va Muhammadning oila a’zolariga O‘z barakangni nozil qilgin! Albatta, Sen maqtalgan, ulug‘langan Zotsan!.
+                                 
 """, reply_markup=admin_keyboard.duolar)
     
 @dp.callback_query(F.data == "namozdan_kiyin")
@@ -239,6 +241,7 @@ async def qunut(callback: CallbackQuery):
     await callback.message.answer(text="""
 «Allohumma innaa nasta’iynuka va nastag‘firuka. Va nu’minu bika va natavakkalu alayka. Va nusniy alaykal xoyro kullahu. Nashkuruka va laa nakfuruk. Va naxla’u va natruku man yafjuruk. Allohumma iyyaaka na’budu va laka nusolliy va nasjudu va ilayka nas’aa va nahfidu. Narjuu rohmataka va naxshaa azaabaka. Inna azaabaka bil kuffaari mulhiq».
 Duoning ma’nosi: «Allohim, albatta, biz Sendan yordam so‘raymiz, senga istig‘for aytamiz va senga iymon keltiramiz, senga tavakkul qilamiz va senga shukr keltiramiz, kufr keltirmaymiz. Kim senga fojirlik qilsa, uni ajratamiz va tark qilamiz. Allohim, sengagina ibodat qilamiz, sengagina namoz o‘qiymiz va sajda qilamiz, Sengagina intilamiz va shoshilamiz. Sening rahmatingni umid qilamiz va azobingdan qo‘rqamiz. Albatta, Sening haq azobing kofirlarga yetguvchidir».  (“Kifoya” kitobidan). Vallohu a’lam!
+<a href='https://t.me/mukammal_namoz/79'>.</a> 
 """, reply_markup=admin_keyboard.duolar)
 
 @dp.callback_query(F.data == "istihora_namozi_duosi")

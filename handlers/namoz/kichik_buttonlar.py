@@ -15,7 +15,7 @@ async def massaeg(messaga: Message):
     await messaga.answer(
         text="""
 Isomning besh ustuni (أركان الإسلام; ham أركان الدين „ dinning ustunlari“) — Islomdagi asosiy amallar boʻlib, barcha musulmonlar uchun farz qilingan ibodatlar hisoblanadi. Ular Jabroil alayhissalom hadislarida jamlangan. .Sunniylar va shialar bu harakatlarning bajarilishi va amaliyotining asosiy tafsilotlari boʻyicha hamfikir, lekin shialar ularni bir xil nom bilan ifodalamaydi. Islomning 5 ustuni: shahodat, namoz, zakot, ramazon oyida ro'za tutish va qodir boʻlganlar uchun Makkaga haj qilishdir
-<a href='https://t.me/c/2342502353/35'>.</a>   
+<a href='https://t.me/mukammal_namoz/83'>.</a>   
 """, 
         reply_markup=admin_keyboard.Admin
     )

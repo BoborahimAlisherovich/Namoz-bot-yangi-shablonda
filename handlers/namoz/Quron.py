@@ -920,7 +920,7 @@ async def humaza(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  
 Makkiy, 9 oyatdan iborat
-  <a href=''>.</a>
+  <a href='https://t.me/mukammal_namoz/194'>.</a>
  """,reply_markup=admin_keyboard.orqaga_qayt) 
 
 @dp.callback_query(F.data == "fiyl")    
@@ -928,7 +928,7 @@ async def fiyl(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""  
 Makkiy, 5 oyatdan iborat
-  <a href='https://t.me/mukammal_namoz/194'>.</a>
+  <a href='https://t.me/mukammal_namoz/195'>.</a>
  """,reply_markup=admin_keyboard.orqaga_qayt) 
 
 @dp.callback_query(F.data == "quraysh")    

@@ -202,7 +202,7 @@ async def juma_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Juma namozi (arabcha: صَلَاة ٱلْجُمُعَة, Ṣalāt al-Jumuʿah) — Musulmonlarning umumiy namozi. Juma kuni masjidlarda peshin namozi vaqtida oʻqiladi. Juma namozi erkin, voyaga yetgan erkaklarga farzdir. Juma namozi ikki rakat farz boʻlib, undan oldin va keyin toʻrt rakat sunnat oʻqiladi. Ilk va oxirgi sunnatlar peshin namozining sunnatlari kabi oʻqiladi. Imomga iqtido qilib oʻqiladigan ikki rakat farz esa, bomdod namozining farzi kabi oʻqiladi. Ayollar, bolalar va jismoniy zaif kishilar uchun juma namozi shart emas. Ayrim zamonaviy hanafiy ilohiyotshunoslari keksa ayollarning jamoaviy namozga borishini nomaqbul deb hisoblaydilar. Musulmonlarga juma namozini uzrsiz sababsiz tark etish taqiqlangan. Tabiiy ofatlar (qattiq ayoz, qor koʻchkisi xavfi, kuchli yomgʻir va h.k.) yuz berganda juma namozi ixtiyoriy holga keladi. Namozdan oldin musulmon toʻliq tahorat olib, tirnoqlarini kesib, toza, bayramona kiyim kiyishi tavsiya etiladi. Bundan tashqari, mushk sepish tavsiya etiladi. Masjidga kirishdan oldin sarimsoq, piyoz va boshqa oʻtkir hidli yeguliklarni isteʼmol qilish taqiqlanadi. Namozdan oldin ikkinchi azon aytiladi va xutba oʻqiladi. Xutba ikki qismdan iborat. Xutbaning bu qismlari orasida imomning qisqa vaqt oʻtirishi maqsadga muvofiqdir. Xutbadan keyin namozxonlar imomdan keyin ikki rakat namoz oʻqiydilar. Juma namozining oʻqilishi peshin namozini oʻqishdan xalos qiladi. Masjidga kechikib kelish mumkin emas. Eng oxirgi kelgan kishi boshqa dindorlarni bosib oʻtmasligi, qator oralarida yurmasligi va boshqalarni bezovta qilib, oldingi qatorlardan joy olishga harakat qilmasligi kerak. Imom xutba oʻqish uchun minbarga chiqqan bir paytda gaplashib, boshqa odamlarni chalgʻitib boʻlmaydi.
-<a href='https://t.me/c/2342502353/24'>.</a> 
+<a href='https://t.me/mukammal_namoz/72'>.</a> 
 """, reply_markup=admin_keyboard.jamoat)
 
 @dp.callback_query(F.data == 'ied')
@@ -211,7 +211,7 @@ async def ied_handler(callback: CallbackQuery):
     await callback.message.answer(text="""
 Alloh rizoligi uchun Ramazon hayiti namozini o‘qishga niyat qilinadi.
 Imom “Allohu akbar” deya takbir aytgach jamoat ham qo‘llarini ko‘tarib, ichida iftitoh takbiri (Allohu akbar)ni aytadi. Takbir aytilganidan so‘ng, qo‘lni qovushtirib turib, har kim ichida sano duosini o‘qiydi. So‘ngra imom qo‘llarini quloqlariga ko‘tarib, uch marta takbir aytadi. Jamoat ham unga ergashadi. Birinchi va ikkinchi takbirda qo‘llar yon tomonga tushiriladi. Uchinchi takbirdan so‘ng qo‘llar bog‘lanib, qiyom holida turiladi. Imom ichida “A’uzu”ni va “Bismillah”ni aytib, ovoz chiqarib “Fotiha” surasini va zam surani o‘qiydi. Takbir aytib ruku va sajda ado etiladi. Shundan so‘ng ikkinchi rakatga turiladi. Imom “Fotiha” surasi bilan zam sura o‘qigach, rukuga bormay turib, xuddi birinchi rakatdagi kabi uch marta takbir aytadi. To‘rtinchi takbirda qo‘l ko‘tarmasdan imom orqasidan ruku va sajda ado qilinadi. Sajdadan so‘ngra “Attahiyyot”, “Salovat” va “Duo” o‘qilib, salom berilib, namoz tugatiladi. Alloh ibodatlaringizni O‘z dargohida qabul etsin!
-<a href='https://t.me/c/2342502353/25'>.</a> 
+<a href='https://t.me/mukammal_namoz/73'>.</a> 
 """, reply_markup=admin_keyboard.jamoat)
 
 @dp.callback_query(F.data == 'janoza')
@@ -219,7 +219,7 @@ async def janoza_handler(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(text="""
 Janoza namozi – vafot etgan musulmonlar uchun jamoat boʻlib oʻqiladigan namoz. Mayyit yuvilib, kafanlanadi, masjidga keltiriladi. Jamoatning oldiga yuqoriroq yerga qoʻyiladi. Imom jamoatning oldiga oʻtib Janoza namozini oʻqiydi. Janoza namozini oʻquvchi kishi avval: "Niyat qildim ushbu marhum uchun Janoza namozini oʻqimoqqa, iqtido qildim ushbu imomga. Xolisan lillohi Taolo", deb niyat qiladi. Imom baland ovoz bilan, qolganlar imomga iqtido qilib maxfiy su'ratda (faqatgina o'zi eshitadigan darajada) "Allohu Akbar" deb qoʻllarini bogʻlaydi. Iqtido qilib oʻquvchi aytganini o'zi eshitadigan darajada takbir aytib qoʻllarini bogʻlaydi. Soʻngra ovoz chiqarmasdan "Sano"ni oʻqiydi: "Subhanakallohumma va bihamdika va tabarokasmuka va taʻala jadduka va la ilaha gʻoyruk". Soʻngra imom bilan birgalikda takror takbir aytiladi. Lekin qoʻllar koʻtarilmaydi. Solli va Barik duolari oʻqiladi. Takror yana qoʻllar koʻtarilmagan holda takbir aytiladi, janoza duosi oʻqiladi. Janoza duosini bilmaydiganlar esa, Qunut duosini yoki duo niyati bilan Fotiha surasini oʻqisa ham boʻladi. Soʻngra imom bilan birgalikda takror takbir qilinib oldin oʻngga, keyin chapga salom beriladi. Janoza namozi oʻqilib boʻlganidan keyin mayyit mozorga olib boriladi, qabrga qoʻyiladi, ruhdariga bagʻishlab Qurʼon tilovat va duo qilinadi
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/19'>.</a> 
+<a href='https://t.me/mukammal_namoz/74'>.</a> 
 """, reply_markup=admin_keyboard.jamoat)
 
 @dp.callback_query(F.data == 'tarovih')
@@ -229,5 +229,5 @@ async def tarovih_handler(callback: CallbackQuery):
 Tarovih – istirohat ma’nosidagi "tarviha" so‘zining ko‘pligidir. To‘rt rakat o‘qib, ortidan dam olingani uchun bu namoz shunday nomlangan.
 Ramazon oyi fazilatlarga boydir. Uning fazilatlaridan biri oy davomida xufton namozidan keyin tarovih namozi o‘qishdir. Payg‘ambarimiz sallallohu alayhi vasallam tarovih namozi haqida shunday deganlar:
 “Alloh taolo Ramazon ro‘zasini farz qildi va men uning qiyomini sizlar uchun sunnat qildim. Kimki iymon va ishonch bilan, savob umidida ro‘za tutsa va kechalari qoim tursa, onadan tug‘ilgan kunidagidek gunohlardan pok bo‘ladi” (Imom Nasoiy rivoyatlari).
-<a href='https://t.me/namoz_uqishni_urganish_Kanal/20'>.</a> 
+<a href='https://t.me/mukammal_namoz/75'>.</a> 
 """, reply_markup=admin_keyboard.jamoat)
