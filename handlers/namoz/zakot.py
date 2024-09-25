@@ -6,6 +6,7 @@ from loader import dp
  #  zakot = ==============---
 @dp.message(F.text=="ZAKOT")
 async def message(message:Message):
+    await message.delete()
     await message.answer(text="ZAKOT  <a href='https://t.me/mukammal_namoz/87'>.</a>   ",reply_markup=admin_keyboard.zakot)  
 
 
