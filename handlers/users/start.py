@@ -6,16 +6,20 @@ from filterss.check_sub_channel import IsCheckSubChannels
 from loader import bot,dp,CHANNELS
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import Message,InlineKeyboardButton
+from aiogram.fsm.context import FSMContext
+
 @dp.message(CommandStart())
 
-async def start_command(message:Message):
+async def start_command(message:Message,state:FSMContext):
     full_name = message.from_user.full_name
     telegram_id = message.from_user.id
     try:
         db.add_user(full_name=full_name,telegram_id=telegram_id) #foydalanuvchi bazaga qo'shildi
         await message.answer(text="Assalomu alaykum",reply_markup=admin_keyboard.start_buttonnew)
+        await state.clear()
     except:
         await message.answer(text="Assalomu alaykum",reply_markup=admin_keyboard.start_buttonnew)
+        await state.clear()
 
 
 

@@ -10,8 +10,7 @@ from aiogram import F, types
 from loader import dp
 from aiogram.types import Message
 
-# Instantiate the bot
-bot = Bot(token=config.BOT_TOKEN)  # Initialize the bot using the token from the config
+bot = Bot(token=config.BOT_TOKEN)  
 
 ADMINS = config.ADMINS
 TOKEN = config.BOT_TOKEN
@@ -21,9 +20,6 @@ class AdminStates(StatesGroup):
     waiting_for_admin_message = State()
     waiting_for_reply_message = State()
 
-# The rest of your code continues...
-
-# Function to create inline keyboard for reply
 def create_inline_keyboard(user_id):
     keyboard_builder = InlineKeyboardBuilder()
     keyboard_builder.button(
@@ -190,4 +186,5 @@ async def handle_admin_reply(message: Message, state: FSMContext):
             await message.reply("Xatolik: Javob yuborishda xato yuz berdi.")
     else:
         await message.reply("Xatolik: Javob yuborish uchun foydalanuvchi ID topilmadi.")
+        await state.clear()
 
