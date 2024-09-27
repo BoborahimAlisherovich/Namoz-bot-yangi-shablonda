@@ -7,8 +7,14 @@ from keyboard_buttons import admin_keyboard
 from aiogram import F
 
 
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import StatesGroup, State
+
 ITEMS_PER_PAGE = 20
 
+# Define a state group for pagination
+class SurahPagination(StatesGroup):
+    current_page = State()
 
 def get_paginated_keyboard(page=0):
     start = page * ITEMS_PER_PAGE
@@ -39,33 +45,37 @@ def get_paginated_keyboard(page=0):
 
     return keyboard_builder.as_markup()
 
-
-# Handle the "QURON" message to show Surah list
+# Handle the "QURON" message to show Surah list and save the state
 @dp.message(F.text == "QURON")
-async def show_surah_list(message: Message):
-    keyboard = get_paginated_keyboard(page=0)
+async def show_surah_list(message: Message, state: FSMContext):
+    page = 0
+    keyboard = get_paginated_keyboard(page=page)
+    await state.set_state(SurahPagination.current_page)
+    await state.update_data(current_page=page)
     await message.answer("Tanlang:", reply_markup=keyboard)
 
-# Handle pagination callback
+# Handle pagination callback and save the new page state
 @dp.callback_query(F.data.startswith("page_"))
-async def paginate_callback(query: CallbackQuery):
+async def paginate_callback(query: CallbackQuery, state: FSMContext):
     page = int(query.data.split("_")[1])
     keyboard = get_paginated_keyboard(page)
+    await state.update_data(current_page=page)  # Save the current page
     await query.message.edit_reply_markup(reply_markup=keyboard)
 
 
-
-
-#fotiha surasi
+# Handle the 'orqaga_qayt' button to return to the saved page
 @dp.callback_query(F.data == "orqaga_qaytamiz")
-async def fotiha(callback: CallbackQuery):
-    await callback.message.delete()
-    keyboard = get_paginated_keyboard(page=0)
-    await callback.message.answer(text="""Quron """,reply_markup=keyboard
-    )
+async def return_to_saved_page(callback: CallbackQuery, state: FSMContext):
+    # Retrieve the saved page
+    data = await state.get_data()
+    page = data.get("current_page", 0)
     
+    # Regenerate the keyboard for the saved page
+    keyboard = get_paginated_keyboard(page=page)
+    await callback.message.delete()
+    await callback.message.answer("Tanlang:", reply_markup=keyboard)
 
-#fotiha surasi
+# Handle specific Surah like "fotiha" and return to the saved page when "orqaga_qayt" is pressed
 @dp.callback_query(F.data == "fotiha_quron")
 async def fotiha(callback: CallbackQuery):
     await callback.message.delete()
@@ -73,9 +83,10 @@ async def fotiha(callback: CallbackQuery):
 Makkiy, 7 oyatdan iborat
 <a href='https://t.me/mukammal_namoz/91'>.</a> """,
    reply_markup=admin_keyboard.orqaga_qayt,
-        parse_mode="HTML"
-    )
-    
+   parse_mode="HTML"
+)
+
+
 
 #baqara
 @dp.callback_query(F.data == "baqara")

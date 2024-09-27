@@ -98,7 +98,7 @@ qushimcha = InlineKeyboardMarkup(
         [InlineKeyboardButton(text="Fil surasi", callback_data="fil_sura"),
          InlineKeyboardButton(text="Quraysh surasi", callback_data="quraysh_")],
          [InlineKeyboardButton(text="Ma'un surasi", callback_data="maun_surasi"),
-         InlineKeyboardButton(text="Kavsar surasi", callback_data="_qushimcha")],
+         InlineKeyboardButton(text="Kavsar surasi", callback_data="kavsar_qushimcha")],
           [InlineKeyboardButton(text="Kofirun surasi", callback_data="kofirun"),
          InlineKeyboardButton(text="Nasr surasi", callback_data="nasr_")],
            [InlineKeyboardButton(text="Masad surasi", callback_data="masad_surasi"),
